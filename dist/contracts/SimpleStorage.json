@@ -1,0 +1,114 @@
+{
+  "fromIndex": 0,
+  "args": [
+    100
+  ],
+  "className": "SimpleStorage",
+  "code": "608060405234801561001057600080fd5b5060405160208061016c8339810180604052602081101561003057600080fd5b5051600055610128806100446000396000f3fe60806040526004361060525763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632a1afcd98114605757806360fe47b114607b5780636d4ce63c1460a3575b600080fd5b348015606257600080fd5b50606960b5565b60408051918252519081900360200190f35b348015608657600080fd5b5060a160048036036020811015609b57600080fd5b503560bb565b005b34801560ae57600080fd5b50606960f6565b60005481565b60008190556040805182815290517f9b893ffb7a1bb67e478788dde7c6568d130d0b623c4f396c2d105b3640c1e1909181900360200190a150565b6000549056fea165627a7a723058202e7a8aa41eae3badedb2310f2237be9674cb1802a35f1793fea994b10aa82ec50029",
+  "runtimeBytecode": "60806040526004361060525763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632a1afcd98114605757806360fe47b114607b5780636d4ce63c1460a3575b600080fd5b348015606257600080fd5b50606960b5565b60408051918252519081900360200190f35b348015608657600080fd5b5060a160048036036020811015609b57600080fd5b503560bb565b005b34801560ae57600080fd5b50606960f6565b60005481565b60008190556040805182815290517f9b893ffb7a1bb67e478788dde7c6568d130d0b623c4f396c2d105b3640c1e1909181900360200190a150565b6000549056fea165627a7a723058202e7a8aa41eae3badedb2310f2237be9674cb1802a35f1793fea994b10aa82ec50029",
+  "realRuntimeBytecode": "60806040526004361060525763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632a1afcd98114605757806360fe47b114607b5780636d4ce63c1460a3575b600080fd5b348015606257600080fd5b50606960b5565b60408051918252519081900360200190f35b348015608657600080fd5b5060a160048036036020811015609b57600080fd5b503560bb565b005b34801560ae57600080fd5b50606960f6565b60005481565b60008190556040805182815290517f9b893ffb7a1bb67e478788dde7c6568d130d0b623c4f396c2d105b3640c1e1909181900360200190a150565b6000549056fea165627a7a72305820",
+  "linkReferences": {},
+  "swarmHash": "2e7a8aa41eae3badedb2310f2237be9674cb1802a35f1793fea994b10aa82ec5",
+  "gasEstimates": {
+    "creation": {
+      "codeDepositCost": "59200",
+      "executionCost": "20184",
+      "totalCost": "79384"
+    },
+    "external": {
+      "get()": "428",
+      "set(uint256)": "21265",
+      "storedData()": "384"
+    }
+  },
+  "functionHashes": {
+    "get()": "6d4ce63c",
+    "set(uint256)": "60fe47b1",
+    "storedData()": "2a1afcd9"
+  },
+  "abiDefinition": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "storedData",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x2a1afcd9"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x60fe47b1"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "get",
+      "outputs": [
+        {
+          "name": "retVal",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x6d4ce63c"
+    },
+    {
+      "inputs": [
+        {
+          "name": "initialValue",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "data",
+          "type": "uint256"
+        }
+      ],
+      "name": "StoredDataChanged",
+      "type": "event",
+      "signature": "0x9b893ffb7a1bb67e478788dde7c6568d130d0b623c4f396c2d105b3640c1e190"
+    }
+  ],
+  "filename": "C:/dev/tests/events-test/.embark/contracts/simple_storage.sol",
+  "originalFilename": "contracts\\simple_storage.sol",
+  "path": "C:\\dev\\tests\\events-test\\contracts\\simple_storage.sol",
+  "gas": "auto",
+  "type": "file",
+  "deploy": true,
+  "_gasLimit": 6000000,
+  "error": false,
+  "deploymentAccount": "0xFD16A22ffac482ba75F1220406e358848161D241",
+  "realArgs": [
+    100
+  ],
+  "address": "0x9c922cd95207e3e10eE731bA20f7EB74739FB766",
+  "deployedAddress": "0x9c922cd95207e3e10eE731bA20f7EB74739FB766"
+}
