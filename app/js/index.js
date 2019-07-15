@@ -12,6 +12,7 @@ EmbarkJS.onReady((err) => {
   const getBtn = document.getElementById('get-btn');
   const setBtn = document.getElementById('set-btn');
   const contractEventsBox = document.getElementById('contract-events');
+  const setDone = document.getElementById('set-done');
 
   SimpleStorage.events.StoredDataChanged((err, event) => {
     contractEventsBox.append(event.returnValues.data + ' ');
@@ -27,12 +28,17 @@ EmbarkJS.onReady((err) => {
     })
   };
 
-  setBtn.onclick = function (e) {
+  setBtn.onclick = function(e) {
     e.preventDefault();
-    SimpleStorage.methods.set(setInput.value).send((err) => {
+    setDone.innerHTML = '';
+    SimpleStorage.methods.set(setInput.value).send((err, txHash) => {
       if (err) {
         return alert('Error setting: ' + (err.message || err));
       }
-    });
+      setDone.innerHTML = 'Tx Hash: ' + txHash;
+    })
+      .on('receipt', (receipt) => {
+        setDone.append(' - Done');
+      });
   };
 });

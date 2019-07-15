@@ -8,7 +8,7 @@ exports.default = void 0;
 /* eslint-disable */
 const EmbarkJS = require("C:/dev/tests/events-test/embarkArtifacts/modules/embarkjs").default || require("C:/dev/tests/events-test/embarkArtifacts/modules/embarkjs");
 
-EmbarkJS.environment = 'development';
+EmbarkJS.environment = 'testnet';
 global.EmbarkJS = EmbarkJS;
 
 const Web3 = global.__Web3 || require('C:/dev/tests/events-test/embarkArtifacts/modules/web3');
@@ -63,13 +63,6 @@ whenEnvIsLoaded(function () {
 
   EmbarkJS.Messages.registerProvider('whisper', __embarkWhisperNewWeb3.default || __embarkWhisperNewWeb3);
 });
-whenEnvIsLoaded(function () {
-  EmbarkJS.Messages.setProvider('whisper', {
-    "server": "localhost",
-    "port": 8546,
-    "type": "ws"
-  });
-});
 
 var whenEnvIsLoaded = function (cb) {
   if (typeof document !== 'undefined' && document !== null && !/comp|inter|loaded/.test(document.readyState)) {
@@ -110,13 +103,8 @@ whenEnvIsLoaded(function () {
 });
 whenEnvIsLoaded(function () {
   EmbarkJS.Names.setProvider('ens', {
-    "env": "development",
-    "registration": {
-      "rootDomain": "embark.eth",
-      "subdomains": {
-        "status": "0x1a2f3b98e434c02363f3dac3174af93c1d690914"
-      }
-    },
+    "env": "testnet",
+    "registration": {},
     "registryAbi": [{
       "constant": true,
       "inputs": [{
@@ -130,8 +118,7 @@ whenEnvIsLoaded(function () {
       }],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x0178b8bf"
+      "type": "function"
     }, {
       "constant": true,
       "inputs": [{
@@ -145,8 +132,7 @@ whenEnvIsLoaded(function () {
       }],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x02571be3"
+      "type": "function"
     }, {
       "constant": false,
       "inputs": [{
@@ -163,8 +149,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x06ab5923"
+      "type": "function"
     }, {
       "constant": false,
       "inputs": [{
@@ -178,8 +163,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x14ab9038"
+      "type": "function"
     }, {
       "constant": true,
       "inputs": [{
@@ -193,8 +177,7 @@ whenEnvIsLoaded(function () {
       }],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x16a25cbd"
+      "type": "function"
     }, {
       "constant": false,
       "inputs": [{
@@ -208,8 +191,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x1896f70a"
+      "type": "function"
     }, {
       "constant": false,
       "inputs": [{
@@ -223,8 +205,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x5b0fc9c3"
+      "type": "function"
     }, {
       "inputs": [],
       "payable": false,
@@ -246,8 +227,7 @@ whenEnvIsLoaded(function () {
         "type": "address"
       }],
       "name": "NewOwner",
-      "type": "event",
-      "signature": "0xce0457fe73731f824cc272376169235128c118b49d344817417c6d108d155e82"
+      "type": "event"
     }, {
       "anonymous": false,
       "inputs": [{
@@ -260,8 +240,7 @@ whenEnvIsLoaded(function () {
         "type": "address"
       }],
       "name": "Transfer",
-      "type": "event",
-      "signature": "0xd4735d920b0f87494915f556dd9b54c8f309026070caea5c737245152564d266"
+      "type": "event"
     }, {
       "anonymous": false,
       "inputs": [{
@@ -274,8 +253,7 @@ whenEnvIsLoaded(function () {
         "type": "address"
       }],
       "name": "NewResolver",
-      "type": "event",
-      "signature": "0x335721b01866dc23fbee8b6b2c7b1e14d6f05c28cd35a2c934239f94095602a0"
+      "type": "event"
     }, {
       "anonymous": false,
       "inputs": [{
@@ -288,10 +266,9 @@ whenEnvIsLoaded(function () {
         "type": "uint64"
       }],
       "name": "NewTTL",
-      "type": "event",
-      "signature": "0x1d4f9bbfc9cab89d66e1a1562f2233ccbf1308cb4f63de2ead5787adddb8fa68"
+      "type": "event"
     }],
-    "registryAddress": "0xC13563b27D13f5E54603Ff94F4837d827a0C44eA",
+    "registryAddress": "0xe7410170f87102DF0055eB195163A03B7F2Bff4A",
     "registrarAbi": [{
       "constant": false,
       "inputs": [{
@@ -305,8 +282,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0xd22057a9"
+      "type": "function"
     }, {
       "inputs": [{
         "name": "ensAddr",
@@ -319,7 +295,6 @@ whenEnvIsLoaded(function () {
       "stateMutability": "nonpayable",
       "type": "constructor"
     }],
-    "registrarAddress": "0x953899b707f093375D92b4d28A8046d872E05631",
     "resolverAbi": [{
       "constant": false,
       "inputs": [{
@@ -336,8 +311,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x10f13a8c"
+      "type": "function"
     }, {
       "constant": true,
       "inputs": [{
@@ -357,8 +331,7 @@ whenEnvIsLoaded(function () {
       }],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x2203ab56"
+      "type": "function"
     }, {
       "constant": false,
       "inputs": [{
@@ -375,8 +348,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x29cd62ea"
+      "type": "function"
     }, {
       "constant": true,
       "inputs": [{
@@ -390,8 +362,7 @@ whenEnvIsLoaded(function () {
       }],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x2dff6941"
+      "type": "function"
     }, {
       "constant": true,
       "inputs": [{
@@ -405,8 +376,7 @@ whenEnvIsLoaded(function () {
       }],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x3b3b57de"
+      "type": "function"
     }, {
       "constant": true,
       "inputs": [{
@@ -423,8 +393,7 @@ whenEnvIsLoaded(function () {
       }],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x59d1d43c"
+      "type": "function"
     }, {
       "constant": false,
       "inputs": [{
@@ -441,8 +410,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x623195b0"
+      "type": "function"
     }, {
       "constant": true,
       "inputs": [{
@@ -456,8 +424,7 @@ whenEnvIsLoaded(function () {
       }],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x691f3431"
+      "type": "function"
     }, {
       "constant": false,
       "inputs": [{
@@ -471,8 +438,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x77372213"
+      "type": "function"
     }, {
       "constant": false,
       "inputs": [{
@@ -486,8 +452,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0xc3d014d6"
+      "type": "function"
     }, {
       "constant": true,
       "inputs": [{
@@ -504,8 +469,7 @@ whenEnvIsLoaded(function () {
       }],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0xc8690233"
+      "type": "function"
     }, {
       "constant": false,
       "inputs": [{
@@ -519,8 +483,7 @@ whenEnvIsLoaded(function () {
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0xd5fa2b00"
+      "type": "function"
     }, {
       "inputs": [{
         "name": "ensAddr",
@@ -541,8 +504,7 @@ whenEnvIsLoaded(function () {
         "type": "address"
       }],
       "name": "AddrChanged",
-      "type": "event",
-      "signature": "0x52d7d861f09ab3d26239d492e8968629f95e9e318cf0b73bfddc441522a15fd2"
+      "type": "event"
     }, {
       "anonymous": false,
       "inputs": [{
@@ -555,8 +517,7 @@ whenEnvIsLoaded(function () {
         "type": "bytes32"
       }],
       "name": "ContentChanged",
-      "type": "event",
-      "signature": "0x0424b6fe0d9c3bdbece0e7879dc241bb0c22e900be8b6c168b4ee08bd9bf83bc"
+      "type": "event"
     }, {
       "anonymous": false,
       "inputs": [{
@@ -569,8 +530,7 @@ whenEnvIsLoaded(function () {
         "type": "string"
       }],
       "name": "NameChanged",
-      "type": "event",
-      "signature": "0xb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7"
+      "type": "event"
     }, {
       "anonymous": false,
       "inputs": [{
@@ -583,8 +543,7 @@ whenEnvIsLoaded(function () {
         "type": "uint256"
       }],
       "name": "ABIChanged",
-      "type": "event",
-      "signature": "0xaa121bbeef5f32f5961a2a28966e769023910fc9479059ee3495d4c1a696efe3"
+      "type": "event"
     }, {
       "anonymous": false,
       "inputs": [{
@@ -601,8 +560,7 @@ whenEnvIsLoaded(function () {
         "type": "bytes32"
       }],
       "name": "PubkeyChanged",
-      "type": "event",
-      "signature": "0x1d6f5e03d3f63eb58751986629a5439baee5079ff04f345becb66e23eb154e46"
+      "type": "event"
     }, {
       "anonymous": false,
       "inputs": [{
@@ -619,23 +577,10 @@ whenEnvIsLoaded(function () {
         "type": "string"
       }],
       "name": "TextChanged",
-      "type": "event",
-      "signature": "0xd8c9334b1a9c2f9da342a0a2b32629c1a229b6445dad78947f674b44444a7550"
-    }],
-    "resolverAddress": "0x01c633D09A708E9ABCb1e1e3E5386dcD43aDfD2a"
+      "type": "event"
+    }]
   });
 });
-"use strict";
-
-if (typeof WebSocket !== 'undefined') {
-  const ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.hostname}:${location.port}`);
-  ws.addEventListener('message', evt => {
-    if (evt.data === 'outputDone') {
-      location.reload(true);
-    }
-  });
-}
-
 var _default = EmbarkJS;
 exports.default = _default;
 

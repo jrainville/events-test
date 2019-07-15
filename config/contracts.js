@@ -80,6 +80,19 @@ module.exports = {
   // merges with the settings in default
   // used with "embark run testnet"
   testnet: {
+    deployment: {
+      accounts: [
+        {
+          mnemonic:   "example exile argue silk regular smile grass bomb merge arm assist farm",
+          hdpath: "m/44'/60'/0'/0/",
+          numAddresses: "10"
+        }
+      ],
+      host: `rinkeby.infura.io/gBjAHp3zcUayoyNoYb9S`,
+      port: false,
+      protocol: 'https',
+      type: "rpc"
+    },
   },
 
   // merges with the settings in default
