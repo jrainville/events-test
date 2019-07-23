@@ -3,6 +3,14 @@
     <title>Events test</title>
     <link rel="stylesheet" href="css/app.css">
     <script src="js/app.js"></script>
+    <style>
+        .btn {
+            border: 1px solid black;
+            padding: 3px;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <h3>Events Test</h3>
@@ -10,11 +18,11 @@
 <form>
     <label for="get-input">Get data</label>
     <input id="get-input" disabled type="text"/>
-    <button id="get-btn">Get</button>
-    <br/>
+    <a id="get-btn" class="btn">Get</a>
+    <br/><br/>
     <label for="set-input">Set data</label>
     <input id="set-input" type="number" min="0" max="99999" placeholder="Set data to an int"/>
-    <button id="set-btn">Set</button>
+    <a id="set-btn" class="btn">Set</a>
     <span id="set-done"></span>
 </form>
 <h4>Contract events:</h4>
