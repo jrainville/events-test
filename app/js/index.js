@@ -1,8 +1,9 @@
 import EmbarkJS from 'Embark/EmbarkJS';
 import SimpleStorage from 'Embark/contracts/SimpleStorage';
 
-
+alert('Waiting on Connect');
 EmbarkJS.onReady((err) => {
+  alert('Ready');
   if (err) {
     return alert('Error connecting to the blockchain: ' + (err.message || err));
   }
