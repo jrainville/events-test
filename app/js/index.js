@@ -16,13 +16,13 @@ EmbarkJS.onReady((err) => {
   const contractEventsBox = document.getElementById('contract-events');
   const setDone = document.getElementById('set-done');
 
-  SimpleStorage.events.StoredDataChanged((err, event) => {
+  /*SimpleStorage.events.StoredDataChanged((err, event) => {
     console.log('GOT AN EVENT', err, event);
     // if (!event.returnValues || !event.returnValues.data) {
     //   return status.innerHTML = 'Nothing in the event return value';
     // }
     // contractEventsBox.append(event.returnValues.data + ' ');
-  });
+  });*/
 
   getBtn.onclick = function (e) {
     e.preventDefault();
