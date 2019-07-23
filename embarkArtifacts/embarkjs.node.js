@@ -63,6 +63,13 @@ whenEnvIsLoaded(function () {
 
   EmbarkJS.Messages.registerProvider('whisper', __embarkWhisperNewWeb3.default || __embarkWhisperNewWeb3);
 });
+whenEnvIsLoaded(function () {
+  EmbarkJS.Messages.setProvider('whisper', {
+    "server": "localhost",
+    "port": 8546,
+    "type": "ws"
+  });
+});
 
 var whenEnvIsLoaded = function (cb) {
   if (typeof document !== 'undefined' && document !== null && !/comp|inter|loaded/.test(document.readyState)) {

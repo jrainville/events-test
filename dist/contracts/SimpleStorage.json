@@ -81,8 +81,7 @@
       ],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "constructor",
-      "signature": "constructor"
+      "type": "constructor"
     },
     {
       "anonymous": false,
@@ -101,8 +100,7 @@
   "filename": "C:/dev/tests/events-test/.embark/contracts/simple_storage.sol",
   "originalFilename": "contracts\\simple_storage.sol",
   "path": "C:\\dev\\tests\\events-test\\contracts\\simple_storage.sol",
-  "gas": 164306,
-  "gasPrice": "1000000000",
+  "gas": "auto",
   "type": "file",
   "deploy": true,
   "_gasLimit": 6000000,
@@ -111,6 +109,6 @@
   "realArgs": [
     100
   ],
-  "deployedAddress": "0x36C718c9ee3AE7a1A84D4e68A7A050a2BE39A846",
-  "transactionHash": "0x57fc35641d3dc50b71aba258c429f349479361c520a8795d0004039539438d5b"
+  "address": "0x36C718c9ee3AE7a1A84D4e68A7A050a2BE39A846",
+  "deployedAddress": "0x36C718c9ee3AE7a1A84D4e68A7A050a2BE39A846"
 }
